@@ -15,7 +15,7 @@
   </tr>
   <tr>
     <td>RAM</td>
-    <td>{{ ram ?? "??" }} GB</td>
+    <td>{{ ram ? ram + "GB" : "??" }}</td>
   </tr>
   <tr>
     <td>CPU Cores</td>
@@ -32,7 +32,7 @@
   <tr>
     <td>Battery</td>
     <td>
-      Level: {{ batteryInfo.level ?? "??" }}%<br />
+      Level: {{ batteryInfo.level ? batteryInfo.level + "%"  : "??" }}<br />
       Charging: {{ batteryInfo.charging ?? "??" }}
     </td>
   </tr>
