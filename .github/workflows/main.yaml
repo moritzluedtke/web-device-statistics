@@ -51,7 +51,7 @@ jobs:
       - name: Upload artifact to GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/browser
+          path: dist/web-device-statistics/browser
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
