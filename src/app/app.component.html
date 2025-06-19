@@ -32,8 +32,26 @@
   <tr>
     <td>Battery</td>
     <td>
-      Level: {{ batteryInfo.level ? batteryInfo.level + "%"  : "??" }}<br />
+      Level: {{ batteryInfo.level ? batteryInfo.level + "%" : "??" }}<br />
       Charging: {{ batteryInfo.charging ?? "??" }}
     </td>
   </tr>
 </table>
+
+<div style="text-align: center; padding: 2rem">
+  <button class="apple-button" (click)="runBenchmark()" [disabled]="loading">
+    Run CPU Benchmark
+  </button>
+
+  @if (loading) {
+  <div style="margin-top: 2rem">
+    <div class="spinner"></div>
+  </div>
+  }
+  <div class="apple-result-container">
+    <h3 class="apple-result">Estimated CPU Score</h3>
+    <p class="apple-result">
+      {{ result }} <span class="unit-label">(higher = faster)</span>
+    </p>
+  </div>
+</div>
