@@ -57,6 +57,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/web-device-statistics/",
               "budgets": [
                 {
                   "type": "initial",
