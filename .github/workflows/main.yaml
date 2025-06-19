@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [ 18.9.1 ]
+        node-version: [ 20.19.2 ]
 
     steps:
       - name: Checkout
@@ -22,14 +22,14 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Lint & build the app
         run: |
-          npm ci
-          npm run build:ci
+          npm install
+          npm run build
       - name: Upload artifact
         if: github.ref == 'refs/heads/main'
         uses: actions/upload-artifact@v4
         with:
           name: webapp-artifact
-          path: dist/SISOSIGN/**
+          path: dist/web-device-statistics/**
 
   deploy-on-github-pages:
     runs-on: ubuntu-latest

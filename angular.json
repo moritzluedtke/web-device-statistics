@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "my-app": {
+    "web-device-statistics": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -83,10 +83,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "my-app:build:production"
+              "buildTarget": "web-device-statistics:build:production"
             },
             "development": {
-              "buildTarget": "my-app:build:development"
+              "buildTarget": "web-device-statistics:build:development"
             }
           },
           "defaultConfiguration": "development"
