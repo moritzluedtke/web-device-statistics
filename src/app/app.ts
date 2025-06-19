@@ -7,8 +7,8 @@ import { Component, OnInit } from "@angular/core";
   styleUrl: "app.component.css",
 })
 export class App implements OnInit {
-  public ram: number | undefined = 0;
-  public cores: number | undefined = 0;
+  public ram: number | undefined = -1;
+  public cores: number | undefined = -1;
   public userAgent = "unknown";
   public platform = "unknown";
   public screenInfo: any = {};
@@ -16,7 +16,6 @@ export class App implements OnInit {
 
   ngOnInit() {
     this.ram = navigator.deviceMemory;
-
     this.cores = navigator.hardwareConcurrency;
 
     this.userAgent = navigator.userAgent;
