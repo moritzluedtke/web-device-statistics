@@ -24,7 +24,7 @@ export class App implements OnInit {
 
     navigator.getBattery?.().then((battery: BatteryManager) => {
       console.log(battery.level, battery.charging);
-      this.batteryInfo.level = battery.level;
+      this.batteryInfo.level = battery.level * 100;
       this.batteryInfo.charging = battery.charging;
     });
 
