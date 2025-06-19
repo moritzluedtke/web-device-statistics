@@ -1,0 +1,36 @@
+<h1 class="page-title">Web Device Statistics</h1>
+
+<table class="apple-style">
+  <tr>
+    <th>Metric</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td>User Agent</td>
+    <td>{{ userAgent }}</td>
+  </tr>
+  <tr>
+    <td>Platform</td>
+    <td>{{ platform }}</td>
+  </tr>
+  <tr>
+    <td>RAM</td>
+    <td>{{ ram }} GB</td>
+  </tr>
+  <tr>
+    <td>CPU Cores</td>
+    <td>{{ cores }}</td>
+  </tr>
+  <tr>
+    <td>Screen Width (px)</td>
+    <td>{{ screenInfo.screenWidth }} x {{ screenInfo.screenHeight }}</td>
+  </tr>
+  <tr>
+    <td>Viewport (px)</td>
+    <td>{{ screenInfo.viewportWidth }} x {{ screenInfo.viewportHeight }}</td>
+  </tr>
+  <tr>
+    <td>Battery</td>
+    <td>Level: {{ batteryInfo.level }}<br>Charging: {{batteryInfo.charging}}</td>
+  </tr>
+</table>
