@@ -45,14 +45,13 @@ export class App implements OnInit {
 
     setTimeout(() => {
       const score = this.runCpuBenchmark(10_000_000);
-      this.result = parseFloat((100000 / score).toFixed(2));
+      this.result = parseFloat((100_000 / score).toFixed(2));
       this.loading = false;
     });
   }
 
   private runCpuBenchmark(iterations: number): number {
     const start = performance.now();
-    let count = 0;
 
     for (let i = 2; i < iterations; i++) {
       let isPrime = true;
@@ -62,7 +61,6 @@ export class App implements OnInit {
           break;
         }
       }
-      if (isPrime) count++;
     }
 
     return performance.now() - start;

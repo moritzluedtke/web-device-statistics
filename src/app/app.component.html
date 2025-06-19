@@ -43,15 +43,16 @@
     Run CPU Benchmark
   </button>
 
-  @if (loading) {
-  <div style="margin-top: 2rem">
-    <div class="spinner"></div>
-  </div>
-  }
   <div class="apple-result-container">
+    @if (loading) {
+    <div style="margin-top: 2rem">
+      <div class="spinner"></div>
+    </div>
+    } @else if (result) {
     <h3 class="apple-result">Estimated CPU Score</h3>
     <p class="apple-result">
-      {{ result }} <span class="unit-label">(higher = faster)</span>
+      {{ result }}<br> <span class="unit-label">(higher = faster)</span>
     </p>
+    }
   </div>
 </div>
